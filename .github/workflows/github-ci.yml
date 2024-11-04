@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main # main 브랜치에 push될 때 트리거
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    services:
+      docker:
+        image: docker:23.0.5
+        options: --privileged # Docker-in-Docker 지원
+
+    env:
+      DOCKER_IMAGE: junwoo5914/portfolio
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: SignIn to Docker Hub
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+        run: echo "$DOCKERHUB_PASSWORD" | docker login --username "$DOCKERHUB_USERNAME" --password-stdin
+
+      - name: Build Docker image
+        run: docker compose build web
+
+      - name: Tag and push Docker image
+        run: |
+          docker tag portfolio-web:latest "portfolio:web-${{ github.ref_name }}"
+          docker push "portfolio:web-${{ github.ref_name }}"
