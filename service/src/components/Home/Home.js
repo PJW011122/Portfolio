@@ -1,3 +1,6 @@
+// 241105
+// 첫화면 첫번째 페이지
+
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";

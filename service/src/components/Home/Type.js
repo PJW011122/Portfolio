@@ -1,3 +1,6 @@
+// 241105
+// Home1에 타이핑으로 들어오는 파트
+
 import React from "react";
 import Typewriter from "typewriter-effect";
 

@@ -1,0 +1,11 @@
+secretGenerator:
+  - name: docker-containers
+    type: kubernetes.io/dockerconfigjson
+    literals:
+      - .dockerconfigjson={"auths":{"https://index.docker.io/v1/":{"username":"$(DOCKER_USERNAME)","password":"$(DOCKER_PASSWORD)","email":"$(DOCKER_EMAIL)","auth":"$(DOCKER_AUTH)"}}}
+    options:
+      disableNameSuffixHash: true
+
+resources:
+  - nginx-web-service.yaml
+  - nginx-web-deployment.yaml

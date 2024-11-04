@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: paaran-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: parkjunwoo.paaran.com
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: portfolio-web
+                port:
+                  number: 80
