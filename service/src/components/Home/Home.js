@@ -17,15 +17,16 @@ function Home() {
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There!{" "}
+                만나서 반갑습니다!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h1>
 
               <h1 className="heading-name">
-                I'M
-                <strong className="main-name"> SOUMYAJIT BEHERA</strong>
+                {/* I'M */}
+                <strong className="main-name"> 박준우</strong>
+                입니다.
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
