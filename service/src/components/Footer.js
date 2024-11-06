@@ -10,10 +10,10 @@ function Footer() {
       <Row>
         <Col md="4" className="footer-copywright">
           <h3>Designed by Soumyajit Behera</h3>
-          <h3>해당 사이트는 네이버 글꼴("나눔바른고딕")로 제작되었습니다</h3>
+          {/* <h3>해당 사이트는 네이버 글꼴("나눔바른고딕")로 제작되었습니다</h3> */}
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} Parkjunwoo</h3>
+          <h3>Copyright © {year} ParkJunwoo</h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">

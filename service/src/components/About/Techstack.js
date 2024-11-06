@@ -1,69 +1,46 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { CgCPlusPlus } from "react-icons/cg";
 import {
+  DiHtml5,
+  DiCss3,
   DiJavascript1,
   DiReact,
   DiNodejs,
-  DiMongodb,
   DiPython,
-  DiGit,
   DiJava,
+  DiNginx,
 } from "react-icons/di";
-import {
-  SiRedis,
-  SiFirebase,
-  SiNextdotjs,
-  SiSolidity,
-  SiPostgresql,
-} from "react-icons/si";
-import { TbBrandGolang } from "react-icons/tb";
+import { SiPostgresql, SiSpring, SiFastapi } from "react-icons/si";
 
 function Techstack() {
+  const techStack = [
+    { icon: <DiHtml5 />, name: "HTML" },
+    { icon: <DiCss3 />, name: "CSS" },
+    { icon: <DiJavascript1 />, name: "JavaScript" },
+    { icon: <DiPython />, name: "Python" },
+    { icon: <DiJava />, name: "Java" },
+    { icon: <DiReact />, name: "React.js" },
+    { icon: <DiNodejs />, name: "Node.js" },
+    { icon: <SiFastapi />, name: "FastAPI" },
+    { icon: <SiSpring />, name: "Spring" },
+    { icon: <DiNginx />, name: "NginX" },
+    { icon: <SiPostgresql />, name: "PostgreSQL" },
+  ];
+
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <TbBrandGolang />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSolidity />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiMongodb />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiNextdotjs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiGit />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFirebase />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRedis />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-      </Col>
+      {techStack.map((tech, index) => (
+        <Col
+          xs={4}
+          md={2}
+          className="tech-icons"
+          key={index}
+          style={{ textAlign: "center" }}
+        >
+          {tech.icon}
+          <p style={{ marginTop: "10px", fontSize: "14px" }}>{tech.name}</p>
+        </Col>
+      ))}
     </Row>
   );
 }
