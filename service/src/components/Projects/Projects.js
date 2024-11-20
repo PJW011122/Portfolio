@@ -40,7 +40,7 @@ function Projects() {
             />
           </Col>
 
-          <Col md={4} className="project-card">
+          {/* <Col md={4} className="project-card">
             <ProjectCard
               imgPath={bitsOfCode}
               isBlog={false}
@@ -49,7 +49,7 @@ function Projects() {
               ghLink="https://github.com/PJW011122/Portfolio"
               demoLink="https://blog.paaran.com/"
             />
-          </Col>
+          </Col> */}
 
           <Col md={4} className="project-card">
             <ProjectCard

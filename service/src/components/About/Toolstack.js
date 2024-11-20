@@ -13,6 +13,7 @@ import {
   SiArgo,
   SiNotion,
   SiSelenium,
+  SiPostman,
 } from "react-icons/si";
 
 function Toolstack() {
@@ -22,6 +23,7 @@ function Toolstack() {
     { icon: <SiGithub />, name: "GitHub" },
     { icon: <SiGitlab />, name: "GitLab" },
     { icon: <SiGithubactions />, name: "GitHub Actions" },
+    { icon: <SiPostman />, name: "Postman" },
     { icon: <SiSelenium />, name: "Selenium" },
     { icon: <SiUbuntu />, name: "Ubuntu" },
     { icon: <SiNaver />, name: "NCP" },
